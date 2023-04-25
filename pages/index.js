@@ -87,27 +87,27 @@ export default function Home({ data1, data2, data3, data4, data5 }) {
 export async function getServerSideProps() {
   // ? requesting the dataset 1
   const res1 = await fetch(
-    "https://https://mobilicis-assignment-chi.vercel.app/api/firstDataset"
+    "https://mobilicis-assignment-chi.vercel.app/api/firstDataset"
   );
   const data1 = await res1.json();
   // ? requesting the dataset 2
   const res2 = await fetch(
-    "https://https://mobilicis-assignment-chi.vercel.app/api/secondDataset"
+    "https://mobilicis-assignment-chi.vercel.app/api/secondDataset"
   );
   const data2 = await res2.json();
   // ? requesting the dataset 3
   const res3 = await fetch(
-    "https://https://mobilicis-assignment-chi.vercel.app/api/thirdDataset"
+    "https://mobilicis-assignment-chi.vercel.app/api/thirdDataset"
   );
   const data3 = await res3.json();
   // ? requesting the dataset 4
   const res4 = await fetch(
-    "https://https://mobilicis-assignment-chi.vercel.app/api/fourthDataset"
+    "https://mobilicis-assignment-chi.vercel.app/api/fourthDataset"
   );
   const data4 = await res4.json();
   // ? requesting the dataset 5
   const res5 = await fetch(
-    "https://https://mobilicis-assignment-chi.vercel.app/api/fifthDataset"
+    "https://mobilicis-assignment-chi.vercel.app/api/fifthDataset"
   );
   const data5 = await res5.json();
   return {
