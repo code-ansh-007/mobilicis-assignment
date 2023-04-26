@@ -14,7 +14,7 @@ This is the API building assignment given by Mobilicis India Private Limited, in
 
 ## API Endpoints and their working
 
-Below are the API Endpoints for each of the questions in the word file, respectively, I would recommend to visit the site first to visualize the data in table format first and then going to the below links to see the working of the API endlpoints. Visit the links below to view the JSON objects output of the dataset.
+Below are the API Endpoints for each of the questions in the word file, respectively, I would recommend to visit the site first to visualize the data in table format first and then going to the below links to see the working of the API endpoints. Visit the links below to view the JSON objects output of the dataset.
 
 1. https://mobilicis-assignment-eta.vercel.app/api/firstDataset
 2. https://mobilicis-assignment-eta.vercel.app/api/secondDataset
