@@ -44,10 +44,10 @@ export default async function handler(req, res) {
 }
 ```
 
-- the `dbConnect` function is a mongodb Atlas connection establishment function which is important from the utils directory of the website, which ensures that there is successfull connection with the database.
-- the `Assignment` model is the overall model of the object of the dataset for retrieval and query purposes
-- to excute the queries i have used the MongoDB Query Language(MQL), which can be seen inside the `try` block of the above code segment, in the above case, i have queried for the objects/users, who own either a 'BMW', 'Mercedes' or an 'Audi' and does not have any digits in his/her email
-- the response is then sent to the frontend when the `getServerSideProps` function is run.
+- the `dbConnect` function is a mongodb Atlas connection establishment function which is imported from the utils directory of the website, which ensures that there is successfull connection between the website and the database.
+- the `Assignment` model is the overall model of the object of the dataset for retrieval and query purposes.
+- to excute the queries i have used the MongoDB Query Language(MQL), which can be seen inside the `try` block of the above code segment, in the above case, i have queried for the objects/users, who own either a 'BMW', 'Mercedes' or an 'Audi' and do not have any digits in his/her email.
+- the response is then sent to the frontend when the `getServerSideProps` function is run in the index.js file in the pages directory of the website.
 - the obtained response is then further handled in the frontend to display it beautifully in the form of tables in the front end.
 
 ## For code analysis clone the repo in your system
