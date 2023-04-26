@@ -10,27 +10,14 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Brief Introduction
+ 
+This is the API building assignment given by Mobilicis India Private Limited, in which i have used NEXT.Js and Tailwind CSS for the frontend, and i have used Express and MongoDB for the backend, the assignment required me to query the sample dataset and give some insightful APIs through the website, which i have successfully executed.I have deployed the website from Vercel and the URL to the working API providing website is - https://mobilicis-assignment-eta.vercel.app/
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Structure and Working of the API 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+I have written the server code in the API directory provided by NEXT.Js which supplies all the APIs to the website, there are 5 endpoint in the website, each corresponds to the questions asked in the assignment word file.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+These endpoints have been then rendered server side before the page loads via the `getServerSideProps` method of NEXT.Js, which is a crucial part in making the API fast and reduce the load time, you can see the results of the API call in just Milliseconds after you press one of the buttons in the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
