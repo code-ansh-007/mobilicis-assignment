@@ -32,7 +32,7 @@ Below are the API Endpoints for each of the questions in the word file, respecti
 
 Lets understand the working of the endpoints by considering fourth question's server code
 
-```
+```javascript
 import dbConnect from "@/utils/mongo";
 import Assignment from "@/models/Assignment";
 
