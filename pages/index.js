@@ -1,4 +1,5 @@
 import Table from "@/components/Table";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home({ data1, data2, data3, data4, data5 }) {
@@ -22,14 +23,24 @@ export default function Home({ data1, data2, data3, data4, data5 }) {
             Users which have income lower than $5 USD and have a car of brand
             “BMW” or “Mercedes”.
           </button>
-          {showFirst && <Table data={data1} />}
+          {showFirst && (
+            <Table
+              data={data1}
+              endpoint={`https://mobilicis-assignment-eta.vercel.app/api/firstDataset`}
+            />
+          )}
           <button
             onClick={() => setShowSecond(!showSecond)}
             className="px-4 py-2  bg-inherit border-2 text-orange-400 border-orange-500 hover:text-white rounded-md hover:scale-105 transition transform duration-300"
           >
             Male Users which have phone price greater than 10,000.
           </button>
-          {showSecond && <Table data={data2} />}
+          {showSecond && (
+            <Table
+              data={data2}
+              endpoint={`https://mobilicis-assignment-eta.vercel.app/api/secondDataset`}
+            />
+          )}
 
           <button
             onClick={() => setShowThird(!showThird)}
@@ -38,7 +49,12 @@ export default function Home({ data1, data2, data3, data4, data5 }) {
             Users whose last name starts with “M” and has a quote character
             length greater than 15 and email includes his/her last name.
           </button>
-          {showThird && <Table data={data3} />}
+          {showThird && (
+            <Table
+              data={data3}
+              endpoint={`https://mobilicis-assignment-eta.vercel.app/api/thirdDataset`}
+            />
+          )}
 
           <button
             onClick={() => setShowFourth(!showFourth)}
@@ -47,7 +63,12 @@ export default function Home({ data1, data2, data3, data4, data5 }) {
             Users which have a car of brand “BMW”, “Mercedes” or “Audi” and
             whose email does not include any digit.
           </button>
-          {showFourth && <Table data={data4} />}
+          {showFourth && (
+            <Table
+              data={data4}
+              endpoint={`https://mobilicis-assignment-eta.vercel.app/api/fourthDataset`}
+            />
+          )}
 
           <button
             onClick={() => setShowFifth(!showFifth)}
@@ -58,24 +79,41 @@ export default function Home({ data1, data2, data3, data4, data5 }) {
           </button>
           {/* making separate table for dataset five as it has different attributes and rows */}
           {showFifth && (
-            <table className="border-collapse border">
-              <thead>
-                <tr>
-                  <th className="border p-1">City</th>
-                  <th className="border p-1">Count</th>
-                  <th className="border p-1">Average Income</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data5.map((i) => (
+            <div className="flex flex-col space-y-3">
+              <Link
+                href={
+                  "https://mobilicis-assignment-eta.vercel.app/api/fifthDataset"
+                }
+              >
+                <div>
+                  <span className="bg-green-500 p-1 px-4 font-bold rounded-md">
+                    API Endpoint
+                  </span>{" "}
+                  -{" "}
+                  <span className="hover:text-blue-400">
+                    https://mobilicis-assignment-eta.vercel.app/api/fifthDataset
+                  </span>
+                </div>
+              </Link>
+              <table className="border-collapse border">
+                <thead>
                   <tr>
-                    <td className="border p-1">{i._id}</td>
-                    <td className="border p-1">{i.count}</td>
-                    <td className="border p-1">{i.avg_income}</td>
+                    <th className="border p-1">City</th>
+                    <th className="border p-1">Count</th>
+                    <th className="border p-1">Average Income</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {data5.map((i) => (
+                    <tr>
+                      <td className="border p-1">{i._id}</td>
+                      <td className="border p-1">{i.count}</td>
+                      <td className="border p-1">{i.avg_income}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
       </main>
