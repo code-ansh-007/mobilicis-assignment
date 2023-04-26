@@ -12,7 +12,7 @@ This is the API building assignment given by Mobilicis India Private Limited, in
 
 - These endpoints have been then rendered server side before the page loads via the `getServerSideProps` method of NEXT.Js, which is a crucial part in making the API fast and reduce the load time, you can see the results of the API call in just Milliseconds after you press one of the buttons in the website.
 
-## API Endpoints and thier working
+## API Endpoints and their working
 
 Below are the API Endpoints for each of the questions in the word file, respectively, I would recommend to visit the site first to visualize the data in table format first and then going to the below links to see the working of the API endlpoints. Visit the links below to view the JSON objects output of the dataset.
 
