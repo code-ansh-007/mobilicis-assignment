@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 mongoose.set("strictQuery", false);
 
-const MONGO_URL = process.env.MONGO_URL;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGO_URL) {
+if (!MONGODB_URI) {
   throw new Error(
-    "Please define the MONGO_URL environment variable inside .env.local"
+    "Please define the MONGODB_URI environment variable inside .env.local"
   );
 }
 let cached = global.mongoose;
@@ -24,7 +24,7 @@ async function dbConnect() {
       bufferCommands: false,
     };
 
-    cached.promise = mongoose.connect(MONGO_URL, opts).then((mongoose) => {
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
       return mongoose;
     });
   }
